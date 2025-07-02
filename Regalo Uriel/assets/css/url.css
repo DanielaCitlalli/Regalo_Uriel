@@ -1,0 +1,82 @@
+/* CSS URLS  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url(../imagenes/rosa-5822519_1280.jpg);
+ /* background-size: cover;*/
+  background-size: 1550px 1000px; /* ancho x alto exacto */
+  background-position:center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: flex-end;  /* Alinear a la derecha */
+  align-items: center;        /* Centrado vertical */
+  padding-right: 50px;        /* Espacio a la derecha */
+
+  font-family: "Shadows Into Light", cursive;
+  
+}
+
+table {
+  width: 400px;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.85); /* fondo blanco semi-transparente */
+  color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  
+}
+
+/* Encabezado */
+table th {
+  background-color: #e738de;
+  color: white;
+  padding: 12px;
+  text-transform: uppercase;
+}
+
+/* Filas */
+table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Efecto al pasar el mouse */
+table tr:hover {
+  background-color: #f0f8ff; /* azul clarito */
+  cursor: pointer;
+}
+
+/* Opcional: zebra stripes */
+table tr:nth-child(even):not(:first-child) {
+  background-color: #f9f9f9;
+}
+
+table {
+  width: 80%;
+  max-width: 800px;
+}
+
+/* Aumentar altura de celdas */
+table th,
+table td {
+  padding: 20px 15px; /* padding más alto: 20px arriba/abajo */
+  text-align: center;
+}
+
+table {
+  width: 600px; /* este valor para hacerla más ancha */
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
