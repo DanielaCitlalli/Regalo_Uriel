@@ -7,7 +7,7 @@
 
 body {
   height: 100vh;
-  background-image: url(../imagenes/rosa-5822519_1280.jpg);
+  background-image: url("../imagenes/rosa-5822519_1280.jpg");
  /* background-size: cover;*/
   background-size: 1550px 1000px; /* ancho x alto exacto */
   background-position:center;
