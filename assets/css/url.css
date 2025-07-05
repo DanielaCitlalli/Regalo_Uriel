@@ -80,3 +80,54 @@ table {
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
+
+
+
+/* --- RESPONSIVE TABLE --- */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        background-color: #fffdfb;
+        border-radius: 10px;
+    }
+
+    td {
+        text-align: left;
+        padding: 0.5rem;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0.3rem;
+        color: #888;
+    }
+}
+
+
+/* Opcional: Para mejorar la vista en móviles aún más */
+@media (max-width: 480px) {
+    .post-uno {
+        padding: 1rem;
+    }
+
+    td {
+        font-size: 0.95rem;
+    }
+
+    a {
+        word-break: break-all;
+    }
+}
