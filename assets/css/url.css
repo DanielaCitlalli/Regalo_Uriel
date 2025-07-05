@@ -6,34 +6,31 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url("../imagenes/rosa-5822519_1280.jpg");
- /* background-size: cover;*/
-  background-size: 1550px 1000px; /* ancho x alto exacto */
-  background-position:center;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-
-  display: flex;
-  justify-content: flex-end;  /* Alinear a la derecha */
-  align-items: center;        /* Centrado vertical */
-  padding-right: 50px;        /* Espacio a la derecha */
-
   font-family: "Shadows Into Light", cursive;
-  
+  display: flex;
+  justify-content:  flex-end;;
+  align-items: center;
+  padding: 2rem;
 }
 
 table {
-  width: 400px;
+  width: 100%;
+  max-width: 800px;
   border-collapse: collapse;
-  background-color: rgba(255, 255, 255, 0.85); /* fondo blanco semi-transparente */
+  background-color: rgba(255, 255, 255, 0.85);
   color: #333;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  
+
+  margin-left: auto;
 }
 
-/* Encabezado */
 table th {
   background-color: #e738de;
   color: white;
@@ -41,93 +38,55 @@ table th {
   text-transform: uppercase;
 }
 
-/* Filas */
 table td {
   padding: 12px;
   text-align: center;
   border-bottom: 1px solid #ccc;
 }
 
-/* Efecto al pasar el mouse */
 table tr:hover {
-  background-color: #f0f8ff; /* azul clarito */
+  background-color: #f0f8ff;
   cursor: pointer;
 }
 
-/* Opcional: zebra stripes */
 table tr:nth-child(even):not(:first-child) {
   background-color: #f9f9f9;
 }
 
-table {
-  width: 80%;
-  max-width: 800px;
-}
-
-/* Aumentar altura de celdas */
-table th,
-table td {
-  padding: 20px 15px; /* padding más alto: 20px arriba/abajo */
-  text-align: center;
-}
-
-table {
-  width: 600px; /* este valor para hacerla más ancha */
-  border-collapse: collapse;
-  background-color: rgba(255, 255, 255, 0.85);
-  color: #333;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-
-
-/* --- RESPONSIVE TABLE --- */
+/* RESPONSIVE TABLE */
 @media (max-width: 768px) {
-    table, thead, tbody, th, td, tr {
-        display: block;
-    }
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
 
-    thead {
-        display: none;
-    }
+  thead {
+    display: none;
+  }
 
-    tr {
-        margin-bottom: 1rem;
-        border: 1px solid #ccc;
-        padding: 1rem;
-        background-color: #fffdfb;
-        border-radius: 10px;
-    }
+  tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background-color: #fffdfb;
+    border-radius: 10px;
+  }
 
-    td {
-        text-align: left;
-        padding: 0.5rem;
-        position: relative;
-    }
+  td {
+    text-align: left;
+    padding: 0.5rem;
+    position: relative;
+  }
 
-    td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        display: block;
-        margin-bottom: 0.3rem;
-        color: #888;
-    }
-}
-
-
-/* Opcional: Para mejorar la vista en móviles aún más */
-@media (max-width: 480px) {
-    .post-uno {
-        padding: 1rem;
-    }
-
-    td {
-        font-size: 0.95rem;
-    }
-
-    a {
-        word-break: break-all;
-    }
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #888;
+  }
 }

@@ -16,9 +16,16 @@ body {
     /*background-position: center;   /* Centra la imagen */
 }
 .container {
-    width: 100%;
+    /*width: 100%;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto;*/
+
+     max-width: 800px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 header {
@@ -44,7 +51,7 @@ header {
 }
 
 .post {
-	width: 1300px;
+	/*width: 1300px;*/
 	margin: 20px auto 30px;
 	padding: 25px;
 	border: solid 4px rgba(85, 57, 150, 0.43);/*borde azul*/
@@ -71,52 +78,46 @@ header {
  }
 
 
- /* pagina responsiva */
+ 
+
+/*--------- pagina responsiva -------------*/
+/* Media Queries para hacerlo responsivo */
 @media (max-width: 768px) {
-    header h1{
-        font-size: 2rem;
-    }
+  header h1 {
+    font-size: 2rem;
+  }
 
-    header p.lead {
-        font-size: 1rem;
-    }
+  .post {
+    margin: 1rem;
+    padding: 1rem;
+  }
 
-    .post {
-        margin: 1rem;
-        padding: 1rem;
-    }
+  .post-header h3 {
+    font-size: 1.5rem;
+  }
 
-    .post-header h3 {
-        font-size: 1.4rem;
-    }
-
-    button {
-        width: 100%;
-        padding: 1rem;
-        font-size: 1.1rem;
-    }
+  .post p {
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
+  header h1 {
+    font-size: 1.6rem;
+  }
 
-    header p.lead {
-        font-size: 0.9rem;
-    }
+  .post-header h3 {
+    font-size: 1.3rem;
+  }
 
-    .post-header h3 {
-        font-size: 1.2rem;
-    }
+  .post p {
+    font-size: 0.9rem;
+  }
 
-    .boton {
-        margin: 1rem;
-    }
-
-    .post {
-        padding: 0.8rem;
-    }
+  .boton button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
 }
 
 
