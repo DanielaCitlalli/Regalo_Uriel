@@ -1,7 +1,7 @@
 .carrusel {
   width: 150%;
   height: 150%;
-  max-width: 1500px; /* más ancho */
+  max-width: 1300px; /* más ancho */
   height: 500px;      /* más alto */
   overflow: hidden;
   margin: auto;
