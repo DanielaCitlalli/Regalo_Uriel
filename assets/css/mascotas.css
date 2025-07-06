@@ -159,3 +159,19 @@ img:hover {
     }
 }
 
+
+
+/*---------Mismo tanaño de imagenes -----------*/
+.imagen-gato {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+/*Resolucion cel */
+@media (max-width: 480px) {
+  .imagen-gato {
+    max-width: 100%;
+  }
+}
