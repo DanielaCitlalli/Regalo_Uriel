@@ -1,5 +1,5 @@
 .carrusel {
-  width: 150%;
+  width: 100%;
   height: 150%;
   max-width: 1300px; /* más ancho */
   height: 500px;      /* más alto */
@@ -42,12 +42,12 @@ img, video {
 .slides {
   display: flex;
   animation: mover 80s linear infinite;
-  width: calc(1000px * 31); /* 1000px por cada imagen (31 en total) */
+  width: calc(600px * 31); /* 1000px por cada imagen (31 en total) */
 }
   
 .slides img {
-  height: 500px;
-  width: 600px; /* o el mismo ancho que `.carrusel` */
+  height: 600px;
+  width: 500px; /* o el mismo ancho que `.carrusel` */
   object-fit: cover; /* ajusta la imagen sin distorsión */
   flex-shrink: 0; /* evita que se reduzca automáticamente */
 }
@@ -60,7 +60,7 @@ img, video {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-31000px); /* 31 imágenes * 1000px */
+    transform: translateX(-18600px); /* 31 imágenes * 1000px */
   }
 }
 
