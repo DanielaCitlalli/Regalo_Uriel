@@ -1,6 +1,7 @@
 .carrusel {
-  width: 100%;
-  max-width: 1000px; /* más ancho */
+  width: 150%;
+  height: 150%;
+  max-width: 1500px; /* más ancho */
   height: 500px;      /* más alto */
   overflow: hidden;
   margin: auto;
@@ -10,7 +11,7 @@
 
 /*estilo responsivo*/
 .container {
-  width: 100%; /* en vez de 1200px */
+  width: 150%; /* en vez de 1200px */
   padding: 2rem;
 }
 .container {
@@ -37,43 +38,32 @@ img, video {
   height: auto;
 }
 
-/*.slides {
-  display: flex;
-  width: 100%;/* 3 magenes imagenes por eso el 100%*/
-  /*animation: mover 30s infinite;/*tiempo del la imagenes 
-}
-
-.slides img {
-  width: 100%;
-  height: 500px;
-  object-fit:contain;
-}
-  */
-
-
-  /*@keyframes mover {
-  0%   { transform: translateX(0%); }
-  33%  { transform: translateX(-100%); }
-  66%  { transform: translateX(-200%); }
-  100% { transform: translateX(0%); }
-}*/
 
 .slides {
   display: flex;
-  width: 3000%; /* 30 imágenes * 100% cada una */
-  animation: mover 70s linear infinite;/* 30 imágenes * 100% cada una */
+  animation: mover 80s linear infinite;
+  width: calc(1000px * 31); /* 1000px por cada imagen (31 en total) */
 }
-
+  
 .slides img {
-    height: 500px;/*Altura de la imagen */
-    object-fit:contain;/*Contenedor de la imagenes */
-  width: calc(40% / 30); /* divide el ancho en 30 partes iguales */
+  height: 500px;
+  width: 600px; /* o el mismo ancho que `.carrusel` */
+  object-fit: cover; /* ajusta la imagen sin distorsión */
+  flex-shrink: 0; /* evita que se reduzca automáticamente */
 }
 
+
+
+/* Animación para mover el carrusel */
 @keyframes mover {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-97.66%); } /* 29 imágenes de 3.33% aprox cada una */
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-31000px); /* 31 imágenes * 1000px */
+  }
 }
+
 
 
 body{
