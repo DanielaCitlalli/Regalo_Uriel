@@ -10,14 +10,30 @@
 
    
     </head>
-    <body>
+    <body> 
 
+<!--Barra de Navegación -->
+
+         <div class="navbar">
+            <nav class="navbar"></nav>
+        <ul>
+            <li data-id="cuento_1">El Romance de Luna y Estrella</li>
+            <li data-id="cuento_2">Juntos en el Bosque Encantado</li>
+            <li data-id="cuento_3">Luna, Estrella y la Aventura en la Playa</li>
+            <li data-id="cuento_4">El Cumpleaños de Luna</li>
+            <li data-id="cuento_5">La Gran Tormenta del Bosque</li>
+        </ul>
+        
+        </div>
+            </nav>
+       
         
         <!--Aqui vamos empezar la cabecera-->
 <header>
         <h1>Cuentos para mi wuawuauser</h1>
         <p class="lead">historias sin fin en donde todo puede pasar.</p>
 </header>
+
 
 <div class="post" id="cuento_1">
     <div class="post-header">
@@ -87,7 +103,7 @@
 <div class="post" id="cuento_3">
     <div class="post-header">
     
-        <h3>Juntos en el Bosque Encantado</h3>
+        <h3>Luna, Estrella y la Aventura en la Playa</h3>
         <br>
 
 <p>Era un día soleado en el bosque, y Luna y Estrella decidieron que era el momento perfecto para una escapada a la playa. Luna y Estrella eran pareja y tenían tres adorables hijos: Brillo, Nube y Rayo. Para asegurarse de que sus hijos estuvieran bien cuidados, pidieron ayuda a sus amigos del bosque.</p>
@@ -181,6 +197,36 @@
   <button type="button">Inicio</button>
 </a>
 </div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const listItems = document.querySelectorAll(".navbar li");
+    const posts = document.querySelectorAll(".post");
+
+    listItems.forEach(item => {
+      item.addEventListener("click", function () {
+        const idToShow = this.getAttribute("data-id");
+
+        // Oculta todos los cuentos
+        posts.forEach(post => {
+          post.style.display = "none";
+        });
+
+        // Muestra solo el seleccionado
+        const selectedPost = document.getElementById(idToShow);
+        if (selectedPost) {
+          selectedPost.style.display = "block";
+        }
+      });
+    });
+
+    // Opcional: Oculta todos los cuentos al inicio o deja solo uno visible
+    posts.forEach((post, index) => {
+      post.style.display = index === 0 ? "block" : "none";
+    });
+  });
+</script>
 
 
     </body>

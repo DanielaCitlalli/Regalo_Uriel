@@ -183,5 +183,14 @@ header {
     }
 }
 
+/*------barra de navegacion-------*/
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
-
+header {
+    margin-top: 80px; /* o ajusta según la altura real de la barra */
+}

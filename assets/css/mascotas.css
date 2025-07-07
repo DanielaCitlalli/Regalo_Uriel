@@ -80,7 +80,7 @@ img:hover {
 
   color: white;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: bold;
   transition: background-color 0.3s ease;
   text-align: center;
@@ -89,9 +89,12 @@ img:hover {
  .boton button:hover{
 
   background-color: #ffffff;
-  margin: 5px;
-  font-size: 20px;
+  margin: 10px;
+  font-size: 30px;
   
+ }
+ .button{
+  font-size: 15px;
  }
 
  body{
@@ -99,6 +102,7 @@ img:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
   
  }
 
@@ -174,4 +178,47 @@ img:hover {
   .imagen-gato {
     max-width: 100%;
   }
+}
+
+
+
+/*------Diseño de la barra de navegación-------*/
+.navbar {
+    background-color: rgba(63, 41, 144, 0.1);
+    box-shadow: 0 2px 8px rgba(67, 67, 205, 0.2);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    gap: 2rem;
+}
+
+.navbar a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #5d6dc7;
+}
+
+/*------barra de navegacion-------*/
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header {
+    margin-top: 80px; /* o ajusta según la altura real de la barra */
+}
+
+.post {
+  display: none;
+}
+
+.titulo-gato {
+  text-align: center;
+  margin-top: 20px;
 }

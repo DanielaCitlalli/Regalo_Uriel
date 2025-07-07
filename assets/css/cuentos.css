@@ -101,6 +101,10 @@ header {
   }
 }
 
+.body {
+  font-size: 1rem ;
+}
+
 @media (max-width: 480px) {
   header h1 {
     font-size: 1.6rem;
@@ -118,6 +122,38 @@ header {
     padding: 0.6rem 1.5rem;
     font-size: 0.9rem;
   }
+}
+
+/*------Diseño de la barra de navegación-------*/
+.navbar {
+    background-color: rgba(63, 41, 144, 0.1);
+    box-shadow: 0 2px 8px rgba(67, 67, 205, 0.2);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    gap: 2rem;
+}
+
+.navbar a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #5d6dc7;
+}
+
+/*------barra de navegacion-------*/
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header {
+    margin-top: 80px; /* o ajusta según la altura real de la barra */
 }
 
 
