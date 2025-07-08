@@ -194,6 +194,7 @@ img:hover {
     justify-content: center;
     padding: 1rem 0;
     gap: 2rem;
+    font-size: 10px;
 }
 
 .navbar a:hover {
@@ -208,6 +209,9 @@ img:hover {
     top: 0;
     width: 100%;
     z-index: 1000;
+    color:#413fe9
+
+  
 }
 
 header {
@@ -222,3 +226,4 @@ header {
   text-align: center;
   margin-top: 20px;
 }
+

@@ -156,4 +156,99 @@ header {
     margin-top: 80px; /* o ajusta según la altura real de la barra */
 }
 
+.navbar li{
+  font-size: 15px;
+  color:#0c253e
+}
 
+/*------Barra de navegación base-------*/
+.navbar {
+  background-color: rgba(63, 41, 144, 0.1);
+  box-shadow: 0 2px 8px rgba(67, 67, 205, 0.2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  color: #0c253e;
+  font-size: 18px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  font-size: 15px;
+  color: #0c253e;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #0c253e;
+}
+
+.navbar a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #5d6dc7;
+}
+
+/*------Botón hamburguesa (oculto por defecto)-------*/
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  display: none;
+  cursor: pointer;
+  color: #0c253e;
+}
+
+/*------Diseño responsivo para móviles-------*/
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(63, 41, 144, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .navbar-container {
+    flex-wrap: wrap;
+  }
+}
+
+header {
+  margin-top: 80px; /* Para evitar que el contenido quede debajo de la navbar */
+}
