@@ -93,8 +93,8 @@ img:hover {
   font-size: 30px;
   
  }
- .button{
-  font-size: 15px;
+ button{
+  font-size: 20px;
  }
 
  body{
@@ -102,6 +102,7 @@ img:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
 
   
  }
