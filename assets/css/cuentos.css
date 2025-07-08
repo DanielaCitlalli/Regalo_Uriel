@@ -208,15 +208,6 @@ header {
   text-shadow: 0 0 10px #5d6dc7;
 }
 
-/*------Botón hamburguesa (oculto por defecto)-------*/
-.menu-toggle {
-  font-size: 24px;
-  background: none;
-  border: none;
-  display: none;
-  cursor: pointer;
-  color: #0c253e;
-}
 
 /*------Diseño responsivo para móviles-------*/
 @media (max-width: 768px) {
@@ -251,4 +242,31 @@ header {
 
 header {
   margin-top: 80px; /* Para evitar que el contenido quede debajo de la navbar */
+}
+
+.cuentos-lista {
+  display: none;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.95);
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  z-index: 1001;
+}
+
+.cuentos-lista.visible {
+  display: flex;
+}
+
+.cuentos-lista li {
+  padding: 0.5rem 0;
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 1px solid #cccccc;
+}
+
+.cuentos-lista li:hover {
+  background-color: #eaeaea;
 }

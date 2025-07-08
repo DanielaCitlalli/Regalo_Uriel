@@ -15,19 +15,17 @@
 <!--Barra de Navegación -->
 
          <div class="navbar">
-            <nav class="navbar-container">
-              <div class="logo">Cuentos</div>
-    <button class="menu-toggle">&#9776;</button> <!-- Icono hamburguesa -->
-        <ul>
-            <li data-id="cuento_1">El Romance de Luna y Estrella</li>
-            <li data-id="cuento_2">Juntos en el Bosque Encantado</li>
-            <li data-id="cuento_3">Luna, Estrella y la Aventura en la Playa</li>
-            <li data-id="cuento_4">El Cumpleaños de Luna</li>
-            <li data-id="cuento_5">La Gran Tormenta del Bosque</li>
-        </ul>
-        
-        </div>
-            </nav>
+  <nav class="navbar-container">
+    <div class="logo" id="logoCuentos">Cuentos</div>
+    <ul class="cuentos-lista">
+      <li data-id="cuento_1">El Romance de Luna y Estrella</li>
+      <li data-id="cuento_2">Juntos en el Bosque Encantado</li>
+      <li data-id="cuento_3">Luna, Estrella y la Aventura en la Playa</li>
+      <li data-id="cuento_4">El Cumpleaños de Luna</li>
+      <li data-id="cuento_5">La Gran Tormenta del Bosque</li>
+    </ul>
+  </nav>
+</div>
        
         
         <!--Aqui vamos empezar la cabecera-->
@@ -224,6 +222,43 @@
     });
 
     // Opcional: Oculta todos los cuentos al inicio o deja solo uno visible
+    posts.forEach((post, index) => {
+      post.style.display = index === 0 ? "block" : "none";
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const logo = document.getElementById("logoCuentos");
+    const lista = document.querySelector(".cuentos-lista");
+    const listItems = document.querySelectorAll(".navbar li");
+    const posts = document.querySelectorAll(".post");
+
+    // Mostrar/ocultar la lista al hacer clic en "Cuentos"
+    logo.addEventListener("click", () => {
+      lista.classList.toggle("visible");
+    });
+
+    // Mostrar solo el cuento correspondiente al hacer clic
+    listItems.forEach(item => {
+      item.addEventListener("click", function () {
+        const idToShow = this.getAttribute("data-id");
+
+        posts.forEach(post => {
+          post.style.display = "none";
+        });
+
+        const selectedPost = document.getElementById(idToShow);
+        if (selectedPost) {
+          selectedPost.style.display = "block";
+        }
+
+        // Oculta la lista después de seleccionar un cuento (opcional)
+        lista.classList.remove("visible");
+      });
+    });
+
+    // Mostrar solo el primer cuento al cargar
     posts.forEach((post, index) => {
       post.style.display = index === 0 ? "block" : "none";
     });
