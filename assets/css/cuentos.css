@@ -1,26 +1,22 @@
 /* CSS Cuentos  */
 * {
-    margin: 0;
-    padding: 0 ,0,0,0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    color: #000000;
-    min-height: 100vh;
-    
-    background-image: url("../imagenes/ai-generated-8794273_1280.jpg");
-    background-attachment: fixed;
-    background-size: cover;        /* Escala la imagen para cubrir toda la pantalla */
-   /* background-repeat: no-repeat;  /* Evita que se repita */
-    /*background-position: center;   /* Centra la imagen */
+  color: #000000;
+  min-height: 100vh;
+  background-image: url("../imagenes/ai-generated-8794273_1280.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.container {
-    /*width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;*/
 
-     max-width: 800px;
+.container {
+  max-width: 800px;
   margin: 2rem auto;
   background-color: #ffffff;
   padding: 1.5rem;
@@ -29,139 +25,49 @@ body {
 }
 
 header {
-    padding: 1rem 0;
-    text-align: center;
-}
-
-header {
-    font-family: 'Waiting for the Sunrise', cursive;
-    font-size: 3.5rem;
-    color: #3336ff; /* azul para dar ese toque de noche  */
-    text-shadow: 0 0 20px #09d5fef4;
-    margin-bottom: 1.2rem;
+  margin-top: 80px;
+  padding: 1rem 0;
+  text-align: center;
+  font-family: 'Waiting for the Sunrise', cursive;
+  font-size: 3.5rem;
+  color: #3336ff;
+  text-shadow: 0 0 20px #09d5fef4;
+  margin-bottom: 1.2rem;
 }
 
 .lead {
-    
-    font-size: 2.1rem;
-    color: #000000;
-    font-family: "Twinkle Star", cursive;
-    max-width: 600px;
-    margin: 0 auto;  
+  font-size: 2.1rem;
+  color: #000000;
+  font-family: "Twinkle Star", cursive;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .post {
-	/*width: 1300px;*/
-	margin: 20px auto 30px;
-	padding: 25px;
-	border: solid 4px rgba(85, 57, 150, 0.43);/*borde azul*/
-	background-color: rgb(107, 124, 136);/*fondo azul marino, transparencia 0.9*/
-
-	font-family: 'Raleway', sans-serif;
+  margin: 20px auto 30px;
+  padding: 25px;
+  border: solid 4px rgba(85, 57, 150, 0.43);
+  background-color: rgb(107, 124, 136);
+  font-family: 'Raleway', sans-serif;
 }
 
 .boton {
+  text-align: center;
+}
 
+.boton button {
+  background-color: #3576b7;
+  margin: 20px;
+  font-size: 20px;
   color: white;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  text-align: center;
-
-}
- .boton button{
-
-  background-color: #3576b7;
-  margin: 20px;
-  font-size: 20px;
- }
-
-
- 
-
-/*--------- pagina responsiva -------------*/
-/* Media Queries para hacerlo responsivo */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
-  .post {
-    margin: 1rem;
-    padding: 1rem;
-  }
-
-  .post-header h3 {
-    font-size: 1.5rem;
-  }
-
-  .post p {
-    font-size: 0.95rem;
-  }
+  padding: 0.6rem 1.5rem;
 }
 
-.body {
-  font-size: 1rem ;
-}
-
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.6rem;
-  }
-
-  .post-header h3 {
-    font-size: 1.3rem;
-  }
-
-  .post p {
-    font-size: 0.9rem;
-  }
-
-  .boton button {
-    padding: 0.6rem 1.5rem;
-    font-size: 0.9rem;
-  }
-}
-
-/*------Diseño de la barra de navegación-------*/
-.navbar {
-    background-color: rgba(63, 41, 144, 0.1);
-    box-shadow: 0 2px 8px rgba(67, 67, 205, 0.2);
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0;
-    gap: 2rem;
-}
-
-.navbar a:hover {
-    color: #fff;
-    text-shadow: 0 0 10px #5d6dc7;
-}
-
-/*------barra de navegacion-------*/
-
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-header {
-    margin-top: 80px; /* o ajusta según la altura real de la barra */
-}
-
-.navbar li{
-  font-size: 15px;
-  color:#0c253e
-}
-
-/*------Barra de navegación base-------*/
+/*------Barra de navegación-------*/
 .navbar {
   background-color: rgba(63, 41, 144, 0.1);
   box-shadow: 0 2px 8px rgba(67, 67, 205, 0.2);
@@ -196,6 +102,7 @@ header {
 .navbar li {
   font-size: 15px;
   color: #0c253e;
+  cursor: pointer;
 }
 
 .navbar a {
@@ -203,47 +110,13 @@ header {
   color: #0c253e;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar li:hover {
   color: #fff;
   text-shadow: 0 0 10px #5d6dc7;
 }
 
-
-/*------Diseño responsivo para móviles-------*/
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: rgba(63, 41, 144, 0.95);
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    padding: 1rem 2rem;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    text-align: center;
-    padding: 1rem 0;
-  }
-
-  .navbar-container {
-    flex-wrap: wrap;
-  }
-}
-
-header {
-  margin-top: 80px; /* Para evitar que el contenido quede debajo de la navbar */
-}
-
+/*------Lista de cuentos desplegable (opcional si la usas)-------*/
 .cuentos-lista {
   display: none;
   flex-direction: column;
@@ -269,4 +142,73 @@ header {
 
 .cuentos-lista li:hover {
   background-color: #eaeaea;
+}
+
+/*------Responsive Design-------*/
+@media (max-width: 768px) {
+  header {
+    font-size: 2rem;
+  }
+
+  .post {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .post-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .post p {
+    font-size: 0.95rem;
+  }
+
+  .navbar-container {
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(63, 41, 144, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    font-size: 1.6rem;
+  }
+
+  .post-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .post p {
+    font-size: 0.9rem;
+  }
+
+  .boton button {
+    font-size: 0.9rem;
+  }
+}
+.post {
+  display: none;
 }

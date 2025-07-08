@@ -207,10 +207,12 @@
     const logo = document.getElementById("logoCuentos");
     const lista = document.querySelector(".cuentos-lista");
 
-    // Mostrar solo el primer cuento al cargar
-    posts.forEach((post, index) => {
-      post.style.display = index === 0 ? "block" : "none";
+    // Estado inicial: mostrar solo la barra de navegación y la lista de cuentos
+    header.style.display = "none";
+    posts.forEach(post => {
+      post.style.display = "none";
     });
+    lista.style.display = "block";
 
     // Al hacer clic en un cuento
     listItems.forEach(item => {
@@ -222,30 +224,31 @@
           post.style.display = "none";
         });
 
-        // Muestra el seleccionado
+        // Muestra el cuento seleccionado y el header
         const selectedPost = document.getElementById(idToShow);
         if (selectedPost) {
           selectedPost.style.display = "block";
         }
 
-        // Oculta la cabecera y la lista (pero no toda la navbar)
-        header.style.display = "none";
+        header.style.display = "block";
         lista.style.display = "none";
       });
     });
 
-    // Al hacer clic en el logo (título "Cuentos"), volver a mostrar la lista y cabecera
+    // Al hacer clic en el logo: volver al menú
     logo.addEventListener("click", () => {
-      header.style.display = "block";
+      header.style.display = "none";
       lista.style.display = "block";
 
-      // Oculta los cuentos cuando se vuelve al menú
+      // Ocultar todos los cuentos
       posts.forEach(post => {
         post.style.display = "none";
       });
     });
   });
 </script>
+
+
 
 
     </body>
