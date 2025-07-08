@@ -262,6 +262,42 @@
       post.style.display = index === 0 ? "block" : "none";
     });
   });
+
+
+  /*-------------------------------*/
+const header = document.querySelector("header");
+const logo = document.getElementById("logoCuentos");
+const lista = document.querySelector(".cuentos-lista");
+
+listItems.forEach(item => {
+  item.addEventListener("click", function () {
+    const idToShow = this.getAttribute("data-id");
+
+    posts.forEach(post => {
+      post.style.display = "none";
+    });
+
+    const selectedPost = document.getElementById(idToShow);
+    if (selectedPost) {
+      selectedPost.style.display = "block";
+    }
+
+    // Oculta cabecera y lista
+    header.style.display = "none";
+    lista.style.display = "none";
+  });
+});
+
+// Al hacer clic en el logo, se muestran la cabecera y lista nuevamente
+logo.addEventListener("click", () => {
+  header.style.display = "block";
+  lista.style.display = "block";
+
+  // Oculta todos los cuentos
+  posts.forEach(post => {
+    post.style.display = "none";
+  });
+});
 </script>
 
 
