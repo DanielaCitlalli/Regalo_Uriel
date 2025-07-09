@@ -104,3 +104,36 @@ header{
   font-size: 20px;
   
  }
+
+ /*Barra de navegación */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(94, 93, 107, 0.1);
+  box-shadow: 0 2px 8px rgba(67, 66, 67, 0.2);
+  z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    gap: 2rem;
+}
+
+.navbar a {
+    color: #726521;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #ffd700;
+}
+

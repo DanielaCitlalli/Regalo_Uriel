@@ -70,7 +70,7 @@ header {
 /*------Barra de navegación-------*/
 .navbar {
   background-color: rgba(63, 41, 144, 0.1);
-  box-shadow: 0 2px 8px rgba(67, 67, 205, 0.2);
+  box-shadow: 0 2px 8px #4343cd33;
   position: fixed;
   top: 0;
   width: 100%;
@@ -211,4 +211,40 @@ header {
 }
 .post {
   display: none;
+}
+
+
+/*Barra de navegación */
+.navbar1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(63, 41, 144, 0.1);  
+  z-index: 1000;
+}
+
+.navbar1 ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    gap: 2rem;
+}
+
+.navbar1 a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar1 a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #4343cd33;;
+}
+
+main, header, .navbar {
+  margin-top: 53px; /* ajusta si tu navbar1 es más alta */
 }
